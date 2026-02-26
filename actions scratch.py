@@ -12,21 +12,21 @@ from datetime import datetime, timedelta
 def on_start(container):
     phantom.debug('on_start() called')
 
-    # call 'list_epp_alerts_1' block
-    list_epp_alerts_1(container=container)
+    # call 'list_groups_1' block
+    list_groups_1(container=container)
 
     return
 
 @phantom.playbook_block()
-def list_epp_alerts_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, loop_state_json=None, **kwargs):
-    phantom.debug("list_epp_alerts_1() called")
+def list_groups_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, loop_state_json=None, **kwargs):
+    phantom.debug("list_groups_1() called")
 
     # phantom.debug('Action: {0} {1}'.format(action['name'], ('SUCCEEDED' if success else 'FAILED')))
 
     parameters = []
 
     parameters.append({
-        "limit": 100,
+        "limit": 50,
     })
 
     ################################################################################
@@ -39,7 +39,7 @@ def list_epp_alerts_1(action=None, success=None, container=None, results=None, h
     ## Custom Code End
     ################################################################################
 
-    phantom.act("list epp alerts", parameters=parameters, name="list_epp_alerts_1", assets=["cs"])
+    phantom.act("list groups", parameters=parameters, name="list_groups_1", assets=["cs"])
 
     return
 

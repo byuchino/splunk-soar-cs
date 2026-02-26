@@ -21,7 +21,7 @@
                     "targetPort": "1_in"
                 }
             ],
-            "hash": "ac406f07eabc524739d88dfa29a5e4b6fd9a32ce",
+            "hash": "29e5d8c284ff751c9c29aff63c547fbeaeea9f53",
             "nodes": {
                 "0": {
                     "data": {
@@ -57,7 +57,7 @@
                 },
                 "2": {
                     "data": {
-                        "action": "list epp alerts",
+                        "action": "list groups",
                         "actionType": "investigate",
                         "advanced": {
                             "join": []
@@ -69,7 +69,7 @@
                         "connectorId": "ae971ba5-3117-444a-8ac5-6ce779f3a232",
                         "connectorVersion": "v1",
                         "functionId": 1,
-                        "functionName": "list_epp_alerts_1",
+                        "functionName": "list_groups_1",
                         "id": "2",
                         "loop": {
                             "enabled": false,
@@ -81,9 +81,10 @@
                             "pauseValue": 2
                         },
                         "parameters": {
-                            "limit": 100
+                            "limit": 50
                         },
                         "requiredParameters": [],
+                        "tab": "byConnector",
                         "type": "action"
                     },
                     "errors": {},
@@ -91,7 +92,7 @@
                     "type": "action",
                     "warnings": {},
                     "x": 980,
-                    "y": 564.5
+                    "y": 560
                 }
             },
             "notes": ""
@@ -104,7 +105,7 @@
         "schema": "5.0.22",
         "version": "7.0.0.198"
     },
-    "create_time": "2026-02-26T23:26:20.696343+00:00",
+    "create_time": "2026-02-26T23:29:28.019184+00:00",
     "draft_mode": false,
     "labels": [
         "*"
