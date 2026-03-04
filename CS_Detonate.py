@@ -36,6 +36,7 @@ def detonate_file_1(action=None, success=None, container=None, results=None, han
                 "vault_id": container_artifact_item[0],
                 "environment": "\"windows 10, 64-bit\"",
                 "comment": "Test file courtesy of Claude",
+                "detail_report": True,
                 "context": {'artifact_id': container_artifact_item[1]},
             })
 
