@@ -21,7 +21,7 @@
                     "targetPort": "1_in"
                 }
             ],
-            "hash": "201632c313f267a68247fefeaca42267cca42a15",
+            "hash": "25c623881be4ae870c052966cce96bdfcc6e0325",
             "nodes": {
                 "0": {
                     "data": {
@@ -83,7 +83,7 @@
                         "parameters": {
                             "comment": "Test file courtesy of Claude",
                             "detail_report": true,
-                            "environment": "\"windows 10, 64-bit\"",
+                            "environment": "windows 10, 64-bit",
                             "is_confidential": true,
                             "limit": 50,
                             "vault_id": "artifact:*.cef.vaultId"
@@ -118,7 +118,7 @@
         "schema": "5.0.22",
         "version": "7.0.0.198"
     },
-    "create_time": "2026-03-04T23:04:14.475024+00:00",
+    "create_time": "2026-03-04T23:05:17.070518+00:00",
     "draft_mode": false,
     "labels": [
         "*"
