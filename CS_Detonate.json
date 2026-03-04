@@ -5,8 +5,23 @@
     "coa": {
         "data": {
             "description": "",
-            "edges": [],
-            "hash": "34f214649e27c33ea22c0dd6363172679b9d6dd0",
+            "edges": [
+                {
+                    "id": "port_0_to_port_2",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_2_to_port_1",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                }
+            ],
+            "hash": "32fa50e0a330ef5a1fd6e2c0b33391d2272242ff",
             "nodes": {
                 "0": {
                     "data": {
@@ -39,6 +54,57 @@
                     "warnings": {},
                     "x": 1000,
                     "y": 1000
+                },
+                "2": {
+                    "data": {
+                        "action": "detonate file",
+                        "actionType": "generic",
+                        "advanced": {
+                            "join": []
+                        },
+                        "connector": "CrowdStrike OAuth API",
+                        "connectorConfigs": [
+                            "cs"
+                        ],
+                        "connectorId": "ae971ba5-3117-444a-8ac5-6ce779f3a232",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "detonate_file_1",
+                        "id": "2",
+                        "loop": {
+                            "enabled": false,
+                            "exitAfterUnit": "m",
+                            "exitAfterValue": 10,
+                            "exitConditionEnabled": false,
+                            "exitLoopAfter": 2,
+                            "pauseUnit": "m",
+                            "pauseValue": 2
+                        },
+                        "parameters": {
+                            "comment": "Test file courtesy of Claude",
+                            "environment": "\"windows 10, 64-bit\"",
+                            "is_confidential": true,
+                            "limit": 50,
+                            "vault_id": "artifact:*.cef.vaultId"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "vault_id"
+                            },
+                            {
+                                "data_type": "string",
+                                "field": "environment"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 980,
+                    "y": 624.5
                 }
             },
             "notes": ""
@@ -51,7 +117,7 @@
         "schema": "5.0.22",
         "version": "7.0.0.198"
     },
-    "create_time": "2026-03-04T22:21:15.299854+00:00",
+    "create_time": "2026-03-04T23:03:32.819963+00:00",
     "draft_mode": false,
     "labels": [
         "*"
