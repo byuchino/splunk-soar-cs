@@ -32,11 +32,11 @@ def detonate_file_1(action=None, success=None, container=None, results=None, han
         if container_artifact_item[0] is not None:
             parameters.append({
                 "limit": 50,
-                "is_confidential": True,
+                "comment": "Test file courtesy of Claude",
                 "vault_id": container_artifact_item[0],
                 "environment": "windows 10, 64-bit",
-                "comment": "Test file courtesy of Claude",
                 "detail_report": True,
+                "is_confidential": True,
                 "context": {'artifact_id': container_artifact_item[1]},
             })
 
@@ -50,7 +50,33 @@ def detonate_file_1(action=None, success=None, container=None, results=None, han
     ## Custom Code End
     ################################################################################
 
-    phantom.act("detonate file", parameters=parameters, name="detonate_file_1", assets=["cs"])
+    phantom.act("detonate file", parameters=parameters, name="detonate_file_1", assets=["cs"], callback=code_1)
+
+    return
+
+
+@phantom.playbook_block()
+def code_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, loop_state_json=None, **kwargs):
+    phantom.debug("code_1() called")
+
+    detonate_file_1_result_data = phantom.collect2(container=container, datapath=["detonate_file_1:action_result.data"], action_results=results)
+
+    detonate_file_1_result_item_0 = [item[0] for item in detonate_file_1_result_data]
+
+    ################################################################################
+    ## Custom Code Start
+    ################################################################################
+
+    # Write your custom code here...
+    phantom.debug(f'data:  {json.dumps(detonate_file_1_result_item_0, indent=4)}')
+
+    ################################################################################
+    ## Custom Code End
+    ################################################################################
+
+    phantom.save_block_result(key="code_1__inputs:0:detonate_file_1:action_result.data", value=json.dumps(detonate_file_1_result_item_0))
+
+    phantom.save_block_result(key="code_1_called", value="True")
 
     return
 
