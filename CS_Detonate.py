@@ -50,7 +50,7 @@ def detonate_file_1(action=None, success=None, container=None, results=None, han
     ## Custom Code End
     ################################################################################
 
-    phantom.act("detonate file", parameters=parameters, name="detonate_file_1", assets=["cs"], callback=code_1)
+    phantom.act("detonate file", parameters=parameters, name="detonate_file_1", assets=["cs_mock"], callback=code_1)
 
     return
 

@@ -21,7 +21,7 @@
                     "targetPort": "3_in"
                 }
             ],
-            "hash": "1880e2a28db6de47238e925dd6cc992e1f58051e",
+            "hash": "23603065fe9d1ca2870adfbc6eda8ac65fc3918b",
             "nodes": {
                 "0": {
                     "data": {
@@ -37,7 +37,7 @@
                     "type": "start",
                     "warnings": {},
                     "x": 1000,
-                    "y": 419.9999999999998
+                    "y": 419.99999999999966
                 },
                 "1": {
                     "data": {
@@ -64,7 +64,7 @@
                         },
                         "connector": "CrowdStrike OAuth API",
                         "connectorConfigs": [
-                            "cs"
+                            "cs_mock"
                         ],
                         "connectorId": "ae971ba5-3117-444a-8ac5-6ce779f3a232",
                         "connectorVersion": "v1",
@@ -140,7 +140,7 @@
         "schema": "5.0.22",
         "version": "7.0.0.198"
     },
-    "create_time": "2026-03-05T18:04:16.007601+00:00",
+    "create_time": "2026-03-12T18:06:42.919433+00:00",
     "draft_mode": false,
     "labels": [
         "*"
